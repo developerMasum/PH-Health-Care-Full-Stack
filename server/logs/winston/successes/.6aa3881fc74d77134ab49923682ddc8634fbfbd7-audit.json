@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\.6aa3881fc74d77134ab49923682ddc8634fbfbd7-audit.json",
+    "files": [
+        {
+            "date": 1714495809489,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-30-04-22-success.log",
+            "hash": "9c6d285ee6f4e370ccdedf4aeb57c520d2575d8ed023c70e60b114c751f937b9"
+        },
+        {
+            "date": 1714622660231,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-02-05-10-success.log",
+            "hash": "4aad4f4e352655d5c8095dbfd6f76b637ce9ae9bd2ec116c2fe2b4174c2ae630"
+        },
+        {
+            "date": 1714626753236,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-02-05-11-success.log",
+            "hash": "dc86e9b76a046e1a55a6d55f1aa9046310f527afe22f039ed1e5b21cdb6577b5"
+        },
+        {
+            "date": 1714631393082,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-02-05-12-success.log",
+            "hash": "9029b41418fb167a7eac90052f16429316e2205d994253bce79342f62021aec7"
+        }
+    ],
+    "hashType": "sha256"
+}
