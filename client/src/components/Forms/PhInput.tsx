@@ -9,7 +9,7 @@ type TInputProps = {
   fullWidth?:boolean
   sx?: SxProps;
   placeholder?:string;
-  required:boolean
+  required?:boolean
 };
 
 const PhInput = ({
@@ -27,7 +27,7 @@ const PhInput = ({
     <Controller
       control={control}
       name={name}
-      render={({ field }) => (
+      render={({ field,fieldState:{error} }) => (
         <TextField
           {...field}
           sx={{ ...sx }}
@@ -38,6 +38,8 @@ const PhInput = ({
           variant="outlined"
           size={size}
           fullWidth={fullWidth}
+          error={!!error?.message}
+          helperText = {error?.message}
         />
       )}
     />

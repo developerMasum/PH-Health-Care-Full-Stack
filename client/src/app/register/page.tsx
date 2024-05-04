@@ -20,31 +20,72 @@ import { userLogin } from "@/services/actions/userLogin";
 import { storeUserInfo } from "@/services/actions/auth.services";
 import PHForm from "@/components/Forms/PHForm";
 import PhInput from "@/components/Forms/PhInput";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+
+
+
+export const patientValidationSchema = z.object({
+  name: z.string().min(1, "Please enter your name!"),
+  email: z.string().email("Please enter a valid email address!"),
+  contactNumber: z
+    .string()
+    .regex(/^\d{11}$/, "Please provide a valid phone number!"),
+  address: z.string().min(1, "Please enter your address!"),
+});
+
+export const validationSchema = z.object({
+  password: z.string().min(6, "Must be at least 6 characters"),
+  patient: patientValidationSchema,
+});
+
+
+export const defaultValues = {
+  password: "",
+  patient: {
+    name: "",
+    email: "",
+    contactNumber: "",
+    address: "",
+  },
+};
+
+
 
 const RegisterPage = () => {
   const router = useRouter();
+  const [error, setError] = useState("");
 
-  const handleRegister = async (values: FieldValues) => {
-    const data = modifyPayload(values);
-    // console.log(data);
-    try {
-      const res = await registerPatient(data);
-      // console.log(res);
-      if (res?.data?.id) {
-        toast.success(res?.message);
-        const result = await userLogin({
-          password: values.password,
-          email: values.patient.email,
-        });
-        if (result?.data?.accessToken) {
-          storeUserInfo({ accessToken: result?.data?.accessToken });
-          router.push("/");
-        }
+
+const handleRegister = async (values: FieldValues) => {
+  const data = modifyPayload(values);
+  // console.log(data);
+  try {
+    const res = await registerPatient(data);
+    // console.log(res);
+    if (res?.success) {
+      toast.success(res?.message);
+      const result = await userLogin({
+        password: values.password,
+        email: values.patient.email,
+      });
+      if (result?.data?.accessToken) {
+        storeUserInfo({ accessToken: result?.data?.accessToken });
+        router.push("/");
       }
-    } catch (err: any) {
-      console.error(err.message);
+    } else {
+      if (
+        res.errorMessages
+      ) {
+        setError("This email is already registered. Please log in.");
+      } 
     }
-  };
+  } catch (err: any) {
+    setError(err.message);
+  }
+};
+
 
   return (
     <Container>
@@ -80,17 +121,30 @@ const RegisterPage = () => {
               </Typography>
             </Box>
           </Stack>
-
+          {error && (
+            <Box>
+              <Typography
+                sx={{
+                  backgroundColor: "red",
+                  padding: "1px",
+                  borderRadius: "2px",
+                  color: "white",
+                  marginTop: "5px",
+                }}
+              >
+                {error}
+              </Typography>
+            </Box>
+          )}
           <Box>
-            <PHForm onSubmit={handleRegister}>
+            <PHForm
+              onSubmit={handleRegister}
+              resolver={zodResolver(validationSchema)}
+              defaultValues={defaultValues}
+            >
               <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
-                  <PhInput
-                    name="patient.name"
-                    label="Name"
-                    required={true}
-                    fullWidth={true}
-                  />
+                  <PhInput name="patient.name" label="Name" fullWidth={true} />
                 </Grid>
                 <Grid item md={6}>
                   <PhInput
@@ -98,7 +152,6 @@ const RegisterPage = () => {
                     label="Email"
                     type="email"
                     fullWidth={true}
-                    required={true}
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -108,7 +161,6 @@ const RegisterPage = () => {
                     name="password"
                     size="small"
                     fullWidth={true}
-                    required={true}
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -118,7 +170,6 @@ const RegisterPage = () => {
                     name="patient.contactNumber"
                     size="small"
                     fullWidth={true}
-                    required={true}
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -128,7 +179,6 @@ const RegisterPage = () => {
                     name="patient.address"
                     size="small"
                     fullWidth={true}
-                    required={true}
                   />
                 </Grid>
               </Grid>
