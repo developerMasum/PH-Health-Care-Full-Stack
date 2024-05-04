@@ -20,7 +20,7 @@ const HeroSection = () => {
             top: "-120px",
           }}
         >
-          <Image src={assets.svgs.grid} alt="doctor1" />
+          <Image src={assets.svgs.grid} alt="doctor1" height={694} width={694} />
         </Box>
         <Typography variant="h2" component="h1" fontWeight={600}>
           Healthier Hearts

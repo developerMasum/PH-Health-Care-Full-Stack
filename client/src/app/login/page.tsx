@@ -11,29 +11,24 @@ import {
 import Image from "next/image";
 import assets from "@/assets";
 import Link from "next/link";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { userLogin } from "@/services/actions/userLogin";
 
 import { toast } from "sonner";
 import { Router } from "next/router";
 import { useRouter } from "next/navigation";
 import { storeUserInfo } from "@/services/actions/auth.services";
+import PHForm from "@/components/Forms/PHForm";
+import PhInput from "@/components/Forms/PhInput";
 
-export type FormValues = {
-  email: string;
-  password: string;
-};
+
+
+
 
 const LoginPage = () => {
   const router = useRouter();
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<FormValues>();
 
-  const onSubmit: SubmitHandler<FormValues> = async (values) => {
+  const handleLogin = async (values: FieldValues) => {
     // console.log(values);
     try {
       const res = await userLogin(values);
@@ -42,13 +37,11 @@ const LoginPage = () => {
         toast.success(res?.message);
         storeUserInfo({ accessToken: res?.data?.accessToken });
         router.push("/");
+      } else {
+        toast.error(res.message);
       }
-     else{
-       toast.error(res.message);
-     }
     } catch (err: any) {
       console.error(err.message);
-        
     }
   };
 
@@ -87,26 +80,22 @@ const LoginPage = () => {
             </Box>
           </Stack>
           <Box>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <PHForm onSubmit={handleLogin}>
               <Grid container spacing={2} my={1}>
                 <Grid item md={6}>
-                  <TextField
+                  <PhInput
+                    name="email"
                     label="Email"
                     type="email"
-                    variant="outlined"
-                    size="small"
-                    fullWidth={true}
-                    {...register("email")}
+                    fullWidth={true} required={true}
                   />
                 </Grid>
                 <Grid item md={6}>
-                  <TextField
+                  <PhInput
+                    name="password"
                     label="Password"
                     type="password"
-                    variant="outlined"
-                    size="small"
-                    fullWidth={true}
-                    {...register("password")}
+                    fullWidth={true} required={true}
                   />
                 </Grid>
               </Grid>
@@ -128,7 +117,7 @@ const LoginPage = () => {
                 Don&apos;t have an account?{" "}
                 <Link href="/register">Create an account</Link>
               </Typography>
-            </form>
+            </PHForm>
           </Box>
         </Box>
       </Stack>
