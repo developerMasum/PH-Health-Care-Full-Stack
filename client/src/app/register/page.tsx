@@ -72,7 +72,7 @@ const handleRegister = async (values: FieldValues) => {
       });
       if (result?.data?.accessToken) {
         storeUserInfo({ accessToken: result?.data?.accessToken });
-        router.push("/");
+        router.push("/dashboard");
       }
     } else {
       if (

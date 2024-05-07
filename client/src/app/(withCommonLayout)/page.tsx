@@ -4,7 +4,6 @@ import Specialist from "@/components/UI/HomePage/Specialist/Specialist";
 import Stats from "@/components/UI/HomePage/Stats/Stats";
 import TopRatedDoctors from "@/components/UI/HomePage/TopRatedDoctors/TopRatedDoctors";
 import WhyUs from "@/components/UI/HomePage/WhyUs/WhyUs";
-import { Button } from "@mui/material";
 
 const HomePage = () => {
   return (
