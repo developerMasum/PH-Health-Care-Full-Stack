@@ -84,6 +84,11 @@
             "date": 1715063154204,
             "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-07-05-12-success.log",
             "hash": "a4fddacd215c053eb06562e1884190949b5eaa76dff6ccec7f46c0dc9cec4986"
+        },
+        {
+            "date": 1715140323363,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-08-05-09-success.log",
+            "hash": "3a68157a85deec52f55f0b7b495b209f7e3050d6ae59837627ee2491ff229681"
         }
     ],
     "hashType": "sha256"
