@@ -12,7 +12,7 @@ type TInputProps = {
   required?:boolean
 };
 
-const PhInput = ({
+const PHInput = ({
   name,
   label,
   type = "text",
@@ -27,7 +27,7 @@ const PhInput = ({
     <Controller
       control={control}
       name={name}
-      render={({ field,fieldState:{error} }) => (
+      render={({ field, fieldState: { error } }) => (
         <TextField
           {...field}
           sx={{ ...sx }}
@@ -39,11 +39,11 @@ const PhInput = ({
           size={size}
           fullWidth={fullWidth}
           error={!!error?.message}
-          helperText = {error?.message}
+          helperText={error?.message}
         />
       )}
     />
   );
 };
 
-export default PhInput;
+export default PHInput;
