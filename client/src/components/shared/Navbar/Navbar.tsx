@@ -16,13 +16,15 @@ const Navbar = () => {
         justifyContent="space-between"
         alignItems={"center"}
       >
-        <Typography variant="h4" component="h1" fontWeight={600}>
-          P
-          <Box component="span" color="primary.main">
-            H
-          </Box>
-          Health Care
-        </Typography>
+        <a href="/">
+          <Typography variant="h4" component="h1" fontWeight={600}>
+            P
+            <Box component="span" color="primary.main">
+              H
+            </Box>
+            Health Care
+          </Typography>
+        </a>
         <Stack direction={"row"} gap={4} justifyContent={"space-between"}>
           <Typography component={Link} href={"/consultation"}>
             Consultation
@@ -32,7 +34,7 @@ const Navbar = () => {
           <Typography>Diagnostics</Typography>
           <Typography>NGOs</Typography>
         </Stack>
-       <AuthButton />
+        <AuthButton />
       </Stack>
     </Container>
   );
