@@ -52,6 +52,8 @@ function getStyles(name: string, personName: readonly string[], theme: Theme) {
   };
 }
 
+
+
 export default function MultipleSelectFieldChip({
   schedules,
   selectedScheduleIds,
@@ -104,7 +106,7 @@ export default function MultipleSelectFieldChip({
           }}
           MenuProps={MenuProps}
         >
-          {schedules.map((schedule: any) => (
+          {schedules?.map((schedule: any) => (
             <MenuItem
               key={schedule.id}
               value={schedule.id}
