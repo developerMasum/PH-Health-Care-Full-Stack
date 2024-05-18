@@ -40,7 +40,9 @@ const Profile = () => {
         setOpen={setIsModalOpen}
         id={data?.id}
       />
-      <Container>
+      <Container sx={{
+        mt:5
+      }}>
         <Grid container spacing={2}>
           <Grid xs={12} md={4}>
             <Box

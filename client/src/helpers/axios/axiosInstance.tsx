@@ -1,5 +1,6 @@
 import { authKey } from "@/constants/authKey";
 import { getNewAccessToken } from "@/services/actions/auth.services";
+import setAccessToken from "@/services/actions/setAccessToken";
 import { IGenericErrorResponse, ResponseSuccessType } from "@/types";
 import { getFromLocalStorage, setToLocalStorage } from "@/utils/local-storage";
 import axios from "axios";
@@ -45,6 +46,7 @@ instance.interceptors.response.use(
       const accessToken =  response?.data?.accessToken
       config.headers["Authorization"] = accessToken;
       setToLocalStorage(authKey,accessToken)
+      setAccessToken(accessToken)
       return instance(config)
     } else {
       const responseObject: IGenericErrorResponse = {
