@@ -19,6 +19,11 @@ export const drawerItems = (role: UserRole): DrawerItem[] => {
       path: `${role}/profile`,
       icon: PersonIcon,
     },
+    {
+      title: "Change Password",
+      path: `${role}/change-password`,
+      icon: PersonIcon,
+    },
   ];
 
   switch (role) {

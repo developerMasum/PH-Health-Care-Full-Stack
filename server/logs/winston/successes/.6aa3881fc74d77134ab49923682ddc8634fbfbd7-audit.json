@@ -6,96 +6,6 @@
     "auditLog": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\.6aa3881fc74d77134ab49923682ddc8634fbfbd7-audit.json",
     "files": [
         {
-            "date": 1714838129348,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-04-05-21-success.log",
-            "hash": "9fd69455c443f0bef0fe8d4f5feb72656783aac93f8607948b5e35af07c79f24"
-        },
-        {
-            "date": 1714841821984,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-04-05-22-success.log",
-            "hash": "76c51232e4678e45edeb15bd38d9b67d2bc7f1b728d765b457382ee9b1287301"
-        },
-        {
-            "date": 1714883079814,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-05-05-10-success.log",
-            "hash": "4095d27700807bdb7b90a827da1d5cfa6b3bcc843b9ce086f2f03b5f6c6b716b"
-        },
-        {
-            "date": 1714889897762,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-05-05-12-success.log",
-            "hash": "3e63ea3afcd3386b1f372a0df688bdb01ab1970aee7e58903e42f3921a132bc6"
-        },
-        {
-            "date": 1715053896253,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-07-05-09-success.log",
-            "hash": "bae2c23e38c914cf2e311a02980de9c88e1f4b4fbff89c2e09784511f720b67b"
-        },
-        {
-            "date": 1715059013378,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-07-05-11-success.log",
-            "hash": "c64623ec1a42e3ed9451b1d513ba2caff444c9d1daef7c0e4dd46a74350c0b52"
-        },
-        {
-            "date": 1715063154204,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-07-05-12-success.log",
-            "hash": "a4fddacd215c053eb06562e1884190949b5eaa76dff6ccec7f46c0dc9cec4986"
-        },
-        {
-            "date": 1715140323363,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-08-05-09-success.log",
-            "hash": "3a68157a85deec52f55f0b7b495b209f7e3050d6ae59837627ee2491ff229681"
-        },
-        {
-            "date": 1715225930042,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-09-05-09-success.log",
-            "hash": "76f5f6371473719cb2436683d98300bf419328077be2d76b6c4cb04002ee10c0"
-        },
-        {
-            "date": 1715331796298,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-10-05-15-success.log",
-            "hash": "f41658546ffdbbace54ac15ef1eae3ed8bf21d40a69b7834c6005ca48740bd80"
-        },
-        {
-            "date": 1715336930211,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-10-05-16-success.log",
-            "hash": "7d4453158b3b80e4b929052e85261d21d08ec1a03012f54c20d8356481c148f5"
-        },
-        {
-            "date": 1715364428332,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-11-05-00-success.log",
-            "hash": "9ef48a63cf5e6d9235938f8fa45f70ff99ce3939d29ba2fdd151cefcb5407c53"
-        },
-        {
-            "date": 1715403148116,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-11-05-10-success.log",
-            "hash": "15ebabe63ed467d7abf57ea7bb2c33f0012e16a653056a60e228f584c15a8f94"
-        },
-        {
-            "date": 1715442035286,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-11-05-21-success.log",
-            "hash": "de390f2c87a026a34b6afba934baea06f9fcbbb6dc837f7766b3c6181594ec45"
-        },
-        {
-            "date": 1715569655906,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-13-05-09-success.log",
-            "hash": "e1182d29c2eedde4e3919feb77d00bdf04b9a98f263d52aa5a81f38a491d7a67"
-        },
-        {
-            "date": 1715743341103,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-15-05-09-success.log",
-            "hash": "81134ce792317ce51380c0532996fdd194b69f8047c0bdb935cf4c11adb2d2ad"
-        },
-        {
-            "date": 1715786631077,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-15-05-21-success.log",
-            "hash": "7aa73ab16276cdbb346a879e6b827f9d5229ee6bf4dc9a59e12722bdbec61776"
-        },
-        {
-            "date": 1715828207865,
-            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-16-05-08-success.log",
-            "hash": "177228415381993f07e74bb7f1da54655be3d23e2ef600a0f97c7d77679b0883"
-        },
-        {
             "date": 1716000867857,
             "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-18-05-08-success.log",
             "hash": "be7473be8d6d4baef8dc5e1c8526b39fad05e694490a4bba0b5316c0fe376dad"
@@ -104,6 +14,21 @@
             "date": 1716007862217,
             "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-18-05-10-success.log",
             "hash": "f5800ef6d4d16a8303896195303e864c2a14358bc9dc1aa04f8048ef9dae10bb"
+        },
+        {
+            "date": 1716113641981,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-19-05-16-success.log",
+            "hash": "9f82024abff053599e1cfdcf1333a869876d30570a6f4e4ea7b0d2a909dd607b"
+        },
+        {
+            "date": 1717086364504,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-30-05-22-success.log",
+            "hash": "ac9c669d6e47b09764f649b335261527fc19d337c8fb1c851d0009bafcb3c3a5"
+        },
+        {
+            "date": 1717147477062,
+            "name": "D:\\A\\PH Health Care\\server\\logs\\winston\\successes\\phu-2024-31-05-15-success.log",
+            "hash": "23f65e43acdfa5e6783292edb0a4a1206fa5d009f535a782769b189b953cfc89"
         }
     ],
     "hashType": "sha256"
